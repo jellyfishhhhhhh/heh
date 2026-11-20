@@ -4,8 +4,8 @@
 #
 # Must run as the logged-in user (not SYSTEM), otherwise it can't see windows.
 
-$CheckIntervalSeconds = 5
-$GraceSeconds = 30   # time allowed for Roblox to open its window while launching
+$CheckIntervalSeconds = 1
+$GraceSeconds = 2    # time allowed for Roblox to open its window while launching
 
 $noWindowSince = $null
 
