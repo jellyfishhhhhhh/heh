@@ -10,12 +10,12 @@ if not exist "%SCRIPT%" (
   pause & exit /b 1
 )
 
-schtasks /Create /F /TN "Roblox Killer" /SC ONLOGON /RL HIGHEST /IT ^
- /TR "powershell.exe -NoExit -NoProfile -ExecutionPolicy Bypass -File \"%SCRIPT%\""
+schtasks /Create /F /TN "Roblox Killer" /SC ONSTART /RU SYSTEM /RL HIGHEST ^
+ /TR "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"%SCRIPT%\""
 
 if %errorlevel%==0 (
   echo.
-  echo Done! Starting it now so you can see it work...
+  echo Done! Starting it now in the background (no window will appear)...
   schtasks /Run /TN "Roblox Killer"
 ) else (
   echo Something went wrong creating the task.
