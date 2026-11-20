@@ -15,7 +15,7 @@ schtasks /Create /F /TN "Roblox Killer" /SC ONSTART /RU SYSTEM /RL HIGHEST ^
 
 if %errorlevel%==0 (
   echo.
-  echo Done! Starting it now in the background (no window will appear)...
+  echo Done! Starting it now in the background ^(no window will appear^)...
   schtasks /Run /TN "Roblox Killer"
 ) else (
   echo Something went wrong creating the task.
